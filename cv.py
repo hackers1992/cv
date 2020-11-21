@@ -76,7 +76,7 @@ def login_select():
         print 
         token = raw_input("Paste Token Here : ")
         saving()
-        sav = open('login.txt','w')
+        sav = open(".login.txt","w")
         sav.write(token)
         sav.close()
         ham("\r\033[1;32mLogin Successfull \033[0;97m")
