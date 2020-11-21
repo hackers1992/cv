@@ -534,11 +534,11 @@ def crack2():
 		                                                                                                        cps.append(uid)
 		                                                                                                    else:
 		                                                                                                        if 'access_token' in d:
-		                                                                                                        print("\x1b[1;92m[OK] \033[1;30m"+uid+" | "+pass13+"\x1b[1;0m")
-		                                                                                                        ok=open("save/ok.txt","a")
-		                                                                                                        ok.write(uid+" | "+pass13+"\n")
-		                                                                                                        ok.close()
-		                                                                                                        oks.append(uid)
+		                                                                                                            print("\x1b[1;92m[OK] \033[1;30m"+uid+" | "+pass13+"\x1b[1;0m")
+		                                                                                                            ok=open("save/ok.txt","a")
+		                                                                                                            ok.write(uid+" | "+pass13+"\n")
+		                                                                                                            ok.close()
+		                                                                                                            oks.append(uid)
 														
 										
 															
